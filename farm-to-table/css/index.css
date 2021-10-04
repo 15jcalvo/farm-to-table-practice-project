@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    border: 1px solid grey;
+}
+/* General Styles */
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.8rem;
+    line-height: 1.5;
+    background-color: #fffafa;
+    color: #444;
+    font-family: 'PT Sans', sans-serif;;
+}
+h1, h2, h3{
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+a{
+    color: #444;
+    text-decoration: none;
+    letter-spacing: 3px;
+    Transition: 2s;
+}
+a:hover{
+    color: #fcb130;
+}
+i{
+    font-size: 5rem;
+}
+
+/* Header section styles */
+header nav{
+    padding: 2% 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+.logo{
+    width: 8%;
+    text-align: center;
+}
+.links{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Top section styles */
+#top{
+    height: 90vh;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Farm section styles */
+#farm h2{
+    margin-top: 5%;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.box{
+    width: 20%;
+    padding: 4%;
+    border: 3px solid black;
+    background-color: #fff;
+    text-align: center;
+    margin: 5% 0;
+}
+
+/* Empty section w/ background */
+#empty{
+    background-image: url('../images/dirt.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 125vh;
+}
+
+/* About section styles */
+#about{
+    margin: 5%;
+}
+.text{
+    width: 60%;
+    border: 3px solid black;
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+/* Gallery section styles*/
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gal-img{
+    width: 40%;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5% 0;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+.hide{
+    background-color: #fff;
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.gal-img:hover .hide{
+    display: flex;
+}
+.farm{
+    background-image: url('../images/barn.jpg');
+}
+.cook{
+    background-image: url('../images/cook.jpg');
+}
+.veg{
+    background-image: url('../images/produce.jpg');
+}
+.animal{
+    background-image: url('../images/sheep.jpg');
+}
+
+/* Contact section styles */
+#contact{
+    display: flex;
+    flex-wrap: wrap;
+}
+#contact h2{
+    width: 100%;
+}
+.left, .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left div{
+    width: 50%;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+}
+.right img{
+    width: 50%;
+}
+
+/* Footer section styles */
+footer{
+    background-color: #fcb130;
+    color: #fff;
+}
+footer div{
+    width: 30%;
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+}
+.footer nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer nav a{
+    margin: 2% 0;
+}
+footer a{
+    color: #fff;
+    transition: 2s;
+}
+footer a:hover{
+    color: #4f4f4f;
+}
+
+/* Media queries */
+/* when building desktop and scaling down use max-width
+when building mobile first and scaling up use min-width */
+@media(max-width:500px){
+/* apply these styles to any screen that is 500px or smaller */
+/* Header section styles */
+    header nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .links{
+        width: 100%;
+    }
+    /* Top section styles */
+    #top{
+        margin-top: 15%;
+    }
+    .titles{
+        color: #fff;
+    }
+    .container{
+        flex-wrap: wrap;
+    }
+    .box{
+        width: 90%;
+        justify-content: center;
+    }
+    /* About section styles */
+    .text{
+        width: 90%;
+    }
+    /* gallery img styles */
+    .gal-img{
+        width: 90%;
+    }
+    .hide{
+        display: block;
+        width: 40%;
+    }
+    /* contact section */
+    .left, .right{
+        width: 100%;
+    }
+    .left{
+        order: 1;
+    }
+    footer{
+        justify-content: center;
+    }
+    .copyright{
+        justify-content: center;
+        align-items: center;
+    }
+}
